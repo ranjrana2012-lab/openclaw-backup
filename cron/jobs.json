@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "4152ebd1-d022-427b-84bd-488552ac1db0",
+      "agentId": "main",
+      "name": "personaplex-heartbeat",
+      "enabled": false,
+      "createdAtMs": 1771185344573,
+      "updatedAtMs": 1771513872032,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1771185344573
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "HEARTBEAT CHECK: Review HEARTBEAT.md for PersonaPlex project tasks. Push forward on Discord voice note validation. Report any blockers."
+      },
+      "state": {
+        "lastRunAtMs": 1771513844578,
+        "lastStatus": "ok",
+        "lastDurationMs": 27454,
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "506fe338-f3c8-4df5-b096-d480551e20df",
+      "agentId": "main",
+      "name": "morning-briefing",
+      "enabled": true,
+      "createdAtMs": 1771696796730,
+      "updatedAtMs": 1772780532607,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run morning Twitter briefing: scan timeline, pick top 10 tweets, write summary to /Daily/YYYY-MM-DD-briefing.md, append video ideas to /Projects/video-ideas.md, send summary to Discord."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772866800000,
+        "lastRunAtMs": 1772780400004,
+        "lastStatus": "ok",
+        "lastDurationMs": 132603,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "b61202dc-13a5-4801-b88a-4ce824151e3f",
+      "agentId": "main",
+      "name": "self-maintenance-update",
+      "enabled": true,
+      "createdAtMs": 1771696796739,
+      "updatedAtMs": 1772251200159,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run self-maintenance update: update OpenClaw packages, restart gateway, report results to Discord #monitoring channel."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772942400000,
+        "lastRunAtMs": 1772251200014,
+        "lastStatus": "error",
+        "lastDurationMs": 145,
+        "consecutiveErrors": 2,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown"
+      }
+    },
+    {
+      "id": "def38225-9713-4ded-9b7c-049026c6f069",
+      "agentId": "main",
+      "name": "self-maintenance-backup",
+      "enabled": true,
+      "createdAtMs": 1771696796746,
+      "updatedAtMs": 1772771443343,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run backup to GitHub: backup SOUL.md, MEMORY.md, skills, configs, cron definitions. Sanitize all secrets before pushing. Report to Discord #monitoring."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772857800000,
+        "lastRunAtMs": 1772771400008,
+        "lastStatus": "ok",
+        "lastDurationMs": 43335,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "runningAtMs": 1772857800007
+      }
+    },
+    {
+      "id": "bad895b9-0720-4edc-81e1-d9632f316a07",
+      "agentId": "main",
+      "name": "health-check",
+      "enabled": true,
+      "createdAtMs": 1771696815004,
+      "updatedAtMs": 1772839919688,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 7-23 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run health checks: scan email for urgent items, check calendar for next 2 hours, check service status. Only alert if action needed - no 'all clear' messages."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772866800000,
+        "lastRunAtMs": 1772839800005,
+        "lastStatus": "ok",
+        "lastDurationMs": 119683,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "8bbda868-4900-4287-af19-52fae27bb6be",
+      "agentId": "main",
+      "name": "moment-before-art",
+      "enabled": true,
+      "createdAtMs": 1771696815020,
+      "updatedAtMs": 1772775156128,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 5 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run moment-before art: fetch today's historical events from Wikipedia, pick most dramatic, generate woodcut/linocut image showing 'moment before', push to TRMNL display."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772861400000,
+        "lastRunAtMs": 1772775000008,
+        "lastStatus": "ok",
+        "lastDurationMs": 156120,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "8246d7c5-34ae-4d82-a896-cefa19bab515",
+      "agentId": "main",
+      "name": "knowledge-reindex",
+      "enabled": true,
+      "createdAtMs": 1771696815033,
+      "updatedAtMs": 1772852729907,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run QMD reindex on Obsidian vault for semantic search. Exclude .obsidian, .trash, Templates directories."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772938800000,
+        "lastRunAtMs": 1772852400005,
+        "lastStatus": "ok",
+        "lastDurationMs": 329902,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "c8ee514f-ebb3-4259-8d0d-9d5bb3fe4680",
+      "agentId": "main",
+      "name": "venture-health-check",
+      "enabled": true,
+      "createdAtMs": 1771726632709,
+      "updatedAtMs": 1772840022882,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 7-23 * * *",
+        "tz": "Europe/London"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run health checks for all live venture studio businesses. Check website uptime, API health, payment webhooks, and SSL certificates. Alert on any P1/P2 issues. Update /Venture/venture/logs/operations-agent.log with results.",
+        "model": "zai/glm-5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772866800000,
+        "lastRunAtMs": 1772839919688,
+        "lastStatus": "ok",
+        "lastDurationMs": 103194,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "56806496-e6e2-4cd9-a6cd-4196903a8de7",
+      "agentId": "main",
+      "name": "venture-market-scout",
+      "enabled": true,
+      "createdAtMs": 1771726632721,
+      "updatedAtMs": 1772788254623,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "Europe/London"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run daily market scouting for venture studio. Check competitor updates, search for market signals, generate 3-5 new business ideas. Update /Venture/venture/market_backlog.md with scored ideas.",
+        "model": "zai/glm-5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772874000000,
+        "lastRunAtMs": 1772787931986,
+        "lastStatus": "ok",
+        "lastDurationMs": 322637,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "a17ee7b9-9756-40c7-8de0-1d47f97b7212",
+      "agentId": "main",
+      "name": "venture-leaderboard",
+      "enabled": true,
+      "createdAtMs": 1771726632726,
+      "updatedAtMs": 1772827726239,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 20 * * *",
+        "tz": "Europe/London"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Calculate daily scores for all live venture studio businesses. Use scoring model: Base Score = Revenue - Refunds - Fees - Costs, with quality modifiers. Update /Venture/venture/leaderboard/daily/ with results and update dashboard.md.",
+        "model": "zai/glm-5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772913600000,
+        "lastRunAtMs": 1772827599389,
+        "lastStatus": "ok",
+        "lastDurationMs": 126850,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "0311fb3e-c464-4d2b-8816-a30f0fcd6f68",
+      "agentId": "main",
+      "name": "venture-security-scan",
+      "enabled": true,
+      "createdAtMs": 1771726651108,
+      "updatedAtMs": 1772852852887,
+      "schedule": {
+        "expr": "0 3 * * *",
+        "kind": "cron",
+        "tz": "Europe/London"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run nightly security scan for venture studio. Scan all code for exposed secrets, check file permissions, audit dependency vulnerabilities. Log findings to /Venture/venture/logs/security-agent.log. Alert human on CRITICAL issues.",
+        "model": "zai/glm-5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772938800000,
+        "lastRunAtMs": 1772852729907,
+        "lastStatus": "ok",
+        "lastDurationMs": 122980,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "05fd7ae1-12ca-4ada-9317-9d3c408be2eb",
+      "agentId": "main",
+      "name": "venture-weekly-report",
+      "enabled": true,
+      "createdAtMs": 1771726651119,
+      "updatedAtMs": 1772388213744,
+      "schedule": {
+        "expr": "0 18 * * 0",
+        "kind": "cron",
+        "tz": "Europe/London"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Generate weekly venture studio report for Sunday evening. Include: portfolio MRR, week-over-week growth, per-business breakdown, pipeline status, leaderboard update, and risk assessment. Write report to /Venture/venture/businesses/current-week/WEEKLY_REPORT.md and announce summary.",
+        "model": "zai/glm-5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772992800000,
+        "lastRunAtMs": 1772388000013,
+        "lastStatus": "error",
+        "lastDurationMs": 213731,
+        "consecutiveErrors": 2,
+        "lastRunStatus": "error",
+        "lastError": "No delivery target resolved for channel \"whatsapp\". Set delivery.to.",
+        "lastDeliveryStatus": "unknown"
+      }
+    },
+    {
+      "id": "6a0e7426-2845-4b5e-b4fb-a758cec1c6dc",
+      "agentId": "main",
+      "name": "venture-evidence-audit",
+      "enabled": true,
+      "createdAtMs": 1771726651130,
+      "updatedAtMs": 1772791675657,
+      "schedule": {
+        "expr": "0 10 * * *",
+        "kind": "cron",
+        "tz": "Europe/London"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Audit evidence ledger for venture studio. Check all claims in /Venture/venture/evidence_ledger.md have proper tags (SOURCE-CITED, MEASURED, ASSUMPTION). Flag untagged claims. Verify evidence for current week's business.",
+        "model": "zai/glm-5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "whatsapp",
+        "to": "447786323263"
+      },
+      "state": {
+        "nextRunAtMs": 1772877600000,
+        "lastRunAtMs": 1772791610313,
+        "lastStatus": "ok",
+        "lastDurationMs": 65344,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron announce delivery failed",
+        "lastError": "cron announce delivery failed"
+      }
+    }
+  ]
+}
