@@ -1,0 +1,26 @@
+id: realtime-stream-processor
+name: Realtime Stream Processor
+category: data
+version: 1.0.0
+status: draft
+owner: internal-team
+tags:
+  - data
+dependencies: []
+required_secrets: []
+description: |
+  Processes realtime streams
+inputs:
+  - name: input_1
+    type: string
+    required: true
+    description: Input parameter 1
+outputs:
+  - name: result
+    type: string
+    description: The primary result
+security:
+  requires_approval: false
+  secrets_required: false
+  network_access: false
+  risk_level: medium

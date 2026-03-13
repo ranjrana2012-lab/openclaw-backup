@@ -1,0 +1,22 @@
+{
+  "token_burn_optimizer": {
+    "target_burn_rate": 0.90,
+    "prompts_per_cycle": 2400,
+    "cycle_duration_hours": 5,
+    "end_date": "2027-03-31",
+    "heartbeat_interval_seconds": 60,
+    "api_key": "REDACTED_FOR_BACKUP",
+    "model": "zai/glm-4.7",
+    "balance_endpoint": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+    "gateway_health_url": "http://localhost:18790/health",
+    "log_file": "/workspace/logs/token-burn-optimizer.log",
+    "state_file": "/workspace/data/token-burn-optimizer-state.json",
+    "max_retries": 3,
+    "retry_delay_seconds": 5,
+    "burn_prompt_template": "System check. Status: OK. Timestamp: {timestamp}",
+    "enable_heartbeat": true,
+    "enable_dashboard": true,
+    "alert_threshold_percent": 10,
+    "min_prompt_interval_seconds": 1
+  }
+}

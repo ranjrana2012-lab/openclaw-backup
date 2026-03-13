@@ -1,0 +1,27 @@
+{
+  "name": "moment-before",
+  "version": "1.0.0",
+  "description": "Daily AI art for e-ink displays - generates woodcut/linocut style images showing 'the moment before' historical events",
+  "main": "generate.js",
+  "scripts": {
+    "start": "node generate.js",
+    "test": "node test-mh370.js",
+    "placeholder": "node create-placeholder.js"
+  },
+  "keywords": [
+    "e-ink",
+    "trmnl",
+    "ai-art",
+    "woodcut",
+    "linocut",
+    "historical-events",
+    "wikipedia"
+  ],
+  "author": "OpenClaw",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

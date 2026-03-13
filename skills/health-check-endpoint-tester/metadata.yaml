@@ -1,0 +1,47 @@
+id: health-check-endpoint-tester
+name: Health Check Tester
+category: observability
+version: 1.0.0
+status: draft
+owner: internal-team
+tags:
+  - observability
+dependencies: []
+required_secrets: []
+description: |
+  Checks health
+inputs:
+  - name: input_1
+    type: string
+    required: true
+    description: Input parameter 1
+  - name: input_2
+    type: string
+    required: false
+    description: Input parameter 2
+outputs:
+  - name: result
+    type: string
+    description: The primary result
+dependencies:
+  services:
+    - docker
+  secrets:
+    - DOCKER_HOST
+tests:
+  command: pytest tests/
+  coverage_threshold: 80
+security:
+  requires_approval: false
+  secrets_required: false
+  network_access: false
+  risk_level: medium
+performance:
+  avg_latency_ms: 250
+  max_latency_ms: 2000
+notes: |
+  Auto-generated seed skill. Implementation required.
+changelog:
+  - version: 1.0.0
+    date: 2026-02-05
+    changes: Initial release

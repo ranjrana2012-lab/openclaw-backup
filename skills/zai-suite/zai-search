@@ -1,0 +1,17 @@
+#!/bin/bash
+# Z.AI Web Search - Quick helper
+# Usage: zai-search "your query here"
+
+set -e
+
+if [ -z "$Z_AI_API_KEY" ]; then
+    echo "Error: Z_AI_API_KEY not set"
+    exit 1
+fi
+
+QUERY="${1:-latest AI news}"
+
+curl -s "https://api.z.ai/api/mcp/web_search_prime/mcp" \
+  -H "Authorization: Bearer $Z_AI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d "{\"tool\": \"webSearchPrime\", \"args\": {\"query\": \"$QUERY\"}}" | jq .

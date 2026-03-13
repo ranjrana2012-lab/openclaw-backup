@@ -1,0 +1,39 @@
+{
+  "$schema": "https://mcporter.dev/schema.json",
+  "servers": {
+    "zai-vision": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@z_ai/mcp-server"],
+      "env": {
+        "Z_AI_API_KEY": "${Z_AI_API_KEY}",
+        "Z_AI_MODE": "ZAI"
+      },
+      "description": "Z.AI Vision MCP - Image analysis, video understanding, OCR, UI screenshots"
+    },
+    "zai-web-search": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+      "headers": {
+        "Authorization": "Bearer ${Z_AI_API_KEY}"
+      },
+      "description": "Z.AI Web Search - Real-time web search with ranked results"
+    },
+    "zai-web-reader": {
+      "type": "http",
+      "url": "https://api.z.ai/api/mcp/web_reader/mcp",
+      "headers": {
+        "Authorization": "Bearer ${Z_AI_API_KEY}"
+      },
+      "description": "Z.AI Web Reader - Full webpage content extraction"
+    },
+    "perplexity": {
+      "type": "http",
+      "url": "https://api.perplexity.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${PERPLEXITY_API_KEY}"
+      },
+      "description": "Perplexity AI Search - Sonar/Pro search with citations"
+    }
+  }
+}
