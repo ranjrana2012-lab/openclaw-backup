@@ -35,24 +35,27 @@ if (!fs.existsSync(CONFIG.outputDir)) {
 async function fetchWikipediaEvents(month, day) {
   const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${month}/${day}`;
 
-  return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+  return new Promise(function(resolve, reject) {
+    https.get(url, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'OpenClaw-MomentBefore/1.0'
+      }
+    }, function(res) {
       let data = '';
-
-      res.on('data', (chunk) => {
+      res.on('data', function(chunk) {
         data += chunk;
       });
-
-      res.on('end', () => {
+      res.on('end', function() {
         try {
           const json = JSON.parse(data);
           resolve(json);
         } catch (e) {
-          reject(new Error(`Failed to parse Wikipedia API response: ${e.message}`));
+          reject(new Error('Failed to parse Wikipedia API response: ' + e.message));
         }
       });
-    }).on('error', (e) => {
-      reject(new Error(`Failed to fetch Wikipedia events: ${e.message}`));
+    }).on('error', function(e) {
+      reject(new Error('Failed to fetch Wikipedia events: ' + e.message));
     });
   });
 }

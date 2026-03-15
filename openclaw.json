@@ -617,7 +617,7 @@
     "web": {
       "search": {
         "enabled": true,
-        "[REDACTED_API_KEY]"
+        "apiKey": "[API_KEY]"
       },
       "fetch": {
         "enabled": true
@@ -677,7 +677,7 @@
     },
     "auth": {
       "mode": "token",
-      "[REDACTED_TOKEN]"
+      "token": "[TOKEN]"
     },
     "tailscale": {
       "mode": "serve",
@@ -690,7 +690,7 @@
     },
     "entries": {
       "nano-banana-pro": {
-        "[REDACTED_API_KEY]"
+        "apiKey": "[API_KEY]"
       }
     }
   },

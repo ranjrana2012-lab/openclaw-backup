@@ -1,0 +1,4 @@
+# OpenClaw Backup Schedule
+0 0 * * * /home/ranj/OpenClaw/backup.sh scheduled >> /home/ranj/OpenClaw/logs/cron.log 2>&1
+0 8 * * * /home/ranj/OpenClaw/backup.sh scheduled >> /home/ranj/OpenClaw/logs/cron.log 2>&1
+0 16 * * * /home/ranj/OpenClaw/backup.sh scheduled >> /home/ranj/OpenClaw/logs/cron.log 2>&1

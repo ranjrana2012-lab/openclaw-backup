@@ -77,13 +77,14 @@
         "message": "Run self-maintenance update: update OpenClaw packages, restart gateway, report results to Discord #monitoring channel."
       },
       "state": {
-        "nextRunAtMs": 1773633600000,
+        "nextRunAtMs": 1773547200000,
         "lastRunAtMs": 1773460866658,
         "lastStatus": "error",
         "lastDurationMs": 20794,
         "consecutiveErrors": 7,
         "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown"
+        "lastDeliveryStatus": "unknown",
+        "lastError": "Unsupported channel: whatsapp"
       },
       "delivery": {
         "mode": "announce",
@@ -116,7 +117,7 @@
         "consecutiveErrors": 8,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
-        "runningAtMs": 1773549000001
+        "lastError": "Unsupported channel: whatsapp"
       },
       "delivery": {
         "mode": "announce",
@@ -130,7 +131,7 @@
       "name": "health-check",
       "enabled": true,
       "createdAtMs": 1771696815004,
-      "updatedAtMs": 1773531048863,
+      "updatedAtMs": 1773504923236,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 7-23 * * *"
@@ -142,11 +143,11 @@
         "message": "Run health checks: scan email for urgent items, check calendar for next 2 hours, check service status. Only alert if action needed - no 'all clear' messages."
       },
       "state": {
-        "nextRunAtMs": 1773558000000,
-        "lastRunAtMs": 1773531000008,
+        "nextRunAtMs": 1773508523236,
+        "lastRunAtMs": 1773504736711,
         "lastStatus": "error",
-        "lastDurationMs": 48855,
-        "consecutiveErrors": 4,
+        "lastDurationMs": 186525,
+        "consecutiveErrors": 35,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastError": "Unsupported channel: whatsapp"
@@ -196,7 +197,7 @@
       "name": "knowledge-reindex",
       "enabled": true,
       "createdAtMs": 1771696815033,
-      "updatedAtMs": 1773543745199,
+      "updatedAtMs": 1773457338971,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *"
@@ -208,11 +209,11 @@
         "message": "Run QMD reindex on Obsidian vault for semantic search. Exclude .obsidian, .trash, Templates directories."
       },
       "state": {
-        "nextRunAtMs": 1773630000000,
-        "lastRunAtMs": 1773543600006,
+        "nextRunAtMs": 1773543600000,
+        "lastRunAtMs": 1773457263396,
         "lastStatus": "error",
-        "lastDurationMs": 145193,
-        "consecutiveErrors": 8,
+        "lastDurationMs": 75575,
+        "consecutiveErrors": 7,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastError": "Unsupported channel: whatsapp"
@@ -229,7 +230,7 @@
       "name": "venture-health-check",
       "enabled": true,
       "createdAtMs": 1771726632709,
-      "updatedAtMs": 1773533351987,
+      "updatedAtMs": 1773504357419,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 7-23 * * *",
@@ -243,14 +244,14 @@
         "model": "zai/glm-4.7"
       },
       "state": {
-        "nextRunAtMs": 1773558000000,
-        "lastRunAtMs": 1773533209183,
+        "nextRunAtMs": 1773505800000,
+        "lastRunAtMs": 1773503921152,
         "lastStatus": "error",
-        "lastDurationMs": 142804,
-        "consecutiveErrors": 14,
+        "lastDurationMs": 436267,
+        "consecutiveErrors": 1,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
-        "lastError": "Unsupported channel: whatsapp"
+        "runningAtMs": 1773505800001
       },
       "delivery": {
         "mode": "announce",
@@ -299,7 +300,7 @@
       "name": "venture-leaderboard",
       "enabled": true,
       "createdAtMs": 1771726632726,
-      "updatedAtMs": 1773518855457,
+      "updatedAtMs": 1773432262382,
       "schedule": {
         "kind": "cron",
         "expr": "0 20 * * *",
@@ -313,11 +314,11 @@
         "model": "zai/glm-4.7"
       },
       "state": {
-        "nextRunAtMs": 1773604800000,
-        "lastRunAtMs": 1773518772931,
+        "nextRunAtMs": 1773518400000,
+        "lastRunAtMs": 1773432126858,
         "lastStatus": "error",
-        "lastDurationMs": 82526,
-        "consecutiveErrors": 11,
+        "lastDurationMs": 135524,
+        "consecutiveErrors": 10,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastError": "Unsupported channel: whatsapp"
@@ -334,7 +335,7 @@
       "name": "venture-security-scan",
       "enabled": true,
       "createdAtMs": 1771726651108,
-      "updatedAtMs": 1773543863158,
+      "updatedAtMs": 1773457441325,
       "schedule": {
         "expr": "0 3 * * *",
         "kind": "cron",
@@ -348,11 +349,11 @@
         "model": "zai/glm-4.7"
       },
       "state": {
-        "nextRunAtMs": 1773630000000,
-        "lastRunAtMs": 1773543745199,
+        "nextRunAtMs": 1773543600000,
+        "lastRunAtMs": 1773457338974,
         "lastStatus": "error",
-        "lastDurationMs": 117959,
-        "consecutiveErrors": 8,
+        "lastDurationMs": 102351,
+        "consecutiveErrors": 7,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastError": "Unsupported channel: whatsapp"
