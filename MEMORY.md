@@ -19,7 +19,7 @@
 - **Alt location:** `/home/ranj/.openclaw/workspace/RanjCRM/` (Python/Flask, newer)
 - **Purpose:** Local-first CRM + Venture OS for Secure Wireless Ltd
 - **Features:** Contacts, deals, ideas, tasks, research, transcription, build/deploy pipeline
-- **Web UI:** `node /home/ranj/ranj_crm/src/web/server.js` → http://localhost:3456?token=ranj-crm-dev-token
+- **Web UI:** `node /home/ranj/ranj_crm/src/web/server.js` → http://[PRIVATE_HOST]?token=ranj-crm-dev-token
 
 ### PostPro UK (Venture Studio W08-2026)
 - **Idea:** LinkedIn Post Generator for UK Professionals

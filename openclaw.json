@@ -617,7 +617,7 @@
     "web": {
       "search": {
         "enabled": true,
-        "apiKey": "[API_KEY]"
+        "apiKey": "BSAAK4NlvfV88QVSgDyxIPbY5_4IddC"
       },
       "fetch": {
         "enabled": true
@@ -690,7 +690,7 @@
     },
     "entries": {
       "nano-banana-pro": {
-        "apiKey": "[API_KEY]"
+        "apiKey": "AIzaSyBUWYc3YQgyTUa5BcbrwII7sqA_Mk7Io5Y"
       }
     }
   },

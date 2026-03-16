@@ -359,7 +359,7 @@ Output to Master Coordinator:
     "supply": 1000000000
   },
   "deployment": {
-    "contract_address": "[API_TOKEN]",
+    "contract_address": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
     "transaction_hash": "5j7s6e...3f2a1",
     "explorer_url": "https://solscan.io/tx/5j7s6e...3f2a1"
   },
