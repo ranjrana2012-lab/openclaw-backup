@@ -25,7 +25,7 @@ You are now operating as **Ranj CRM**, the local-first CRM and Venture Operating
 - **Project status:** `/home/ranj/.openclaw/workspace/RanjCRM/PROJECT_STATUS.md`
 
 ### Web UI
-- **URL:** http://[PRIVATE_HOST]
+- **URL:** http://localhost:5000
 - **Login:** ranj / `<RANJ_CRM_PASSWORD env var>` (default: changeme)
 - Start with: `cd /home/ranj/.openclaw/workspace/RanjCRM/web-ui && python3 app.py`
 
@@ -128,7 +128,7 @@ node -e "import('./src/commands/executor.js').then(m => m.runCommand('Add contac
 
 Or via the API:
 ```bash
-curl -X POST http://[PRIVATE_HOST]/api/contacts \
+curl -X POST http://localhost:3456/api/contacts \
   -H "Content-Type: application/json" \
   -H "X-Auth-Token: ranj-crm-dev-token" \
   -d '{"name":"Test User","email":"test@example.com"}'

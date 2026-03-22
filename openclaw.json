@@ -677,7 +677,7 @@
     },
     "auth": {
       "mode": "token",
-      "token": "[TOKEN]"
+      "token": "[SERVICE_TOKEN]"
     },
     "tailscale": {
       "mode": "serve",

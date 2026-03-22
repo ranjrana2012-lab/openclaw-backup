@@ -79,7 +79,7 @@ Default settings:
 
 ## Dashboard
 
-Real-time metrics available in OpenClaw Web UI at http://[PRIVATE_HOST]/
+Real-time metrics available in OpenClaw Web UI at http://localhost:18790/
 
 Metrics include:
 - Current token balance
